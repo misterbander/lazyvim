@@ -13,7 +13,7 @@ vim.keymap.del("n", "<C-W><C-D>") -- Show diagnostics under cursor
 vim.keymap.del("n", "<C-W>Þ") -- WTF IS THIS??
 vim.keymap.del("t", "<Esc><Esc>")
 
-vim.keymap.set({ "n", "i", "x", "s" }, "<C-s>", "<cmd>wa<cr><esc>", { desc = "Save All " }) -- Save all
+vim.keymap.set({ "n", "i", "x", "s" }, "<C-s>", "<cmd>wa<cr><esc>", { desc = "Save All " })
 -- Open lazygit in fullscreen
 vim.keymap.set("n", "<leader>gg", function()
   LazyVim.terminal.open({ "lazygit" }, { size = { width = 1, height = 1 } })
