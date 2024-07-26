@@ -10,7 +10,6 @@ vim.keymap.del("n", "<leader>ft") -- Terminal (Root Dir)
 vim.keymap.del("n", "<leader>fT") -- Terminal (cwd)
 vim.keymap.del("n", "<C-W>d") -- Show diagnostics under cursor
 vim.keymap.del("n", "<C-W><C-D>") -- Show diagnostics under cursor
-vim.keymap.del("n", "<C-W>Þ") -- WTF IS THIS??
 vim.keymap.del("t", "<Esc><Esc>")
 
 vim.keymap.set({ "n", "i", "x", "s" }, "<C-s>", "<cmd>wa<cr><esc>", { desc = "Save All " })
