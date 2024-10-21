@@ -16,6 +16,10 @@ local select_one_or_multi = function(prompt_bufnr)
   end
 end
 
+local get_selection = function()
+  return vim.fn.getregion(vim.fn.getpos("."), vim.fn.getpos("v"), { mode = vim.fn.mode() })
+end
+
 return {
   "nvim-telescope/telescope.nvim",
   opts = {
@@ -29,6 +33,14 @@ return {
     return {
       { "<leader>f", "<cmd>Telescope find_files<cr>", desc = "Find Files" },
       { "<leader>st", "<cmd>Telescope live_grep<cr>", desc = "Grep (Root Dir)" },
+      {
+        "<leader>st",
+        function()
+          require("telescope.builtin").live_grep({ default_text = table.concat(get_selection()) })
+        end,
+        desc = "Grep (Root Dir)",
+        mode = "v",
+      },
       { "<leader>sk", "<cmd>Telescope keymaps<cr>", desc = "Keymaps" },
     }
   end,
