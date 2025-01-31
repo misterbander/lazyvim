@@ -3,5 +3,6 @@
 -- Add any additional options here
 
 vim.g.autoformat = false
+vim.g.snacks_animate = false
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
